@@ -33,7 +33,7 @@ class ArticlesTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_article = Articles('CNN','Joan Glory','The next Big thing','A look at the techhubs in Africa','techie.com','2020-07-11T07:57:16Z')
+        self.new_article = Articles('CNN','Joan Glory','The next Big thing','A look at the techhubs in Africa','techie.com','techie.com/7643t94.jpg','2020-07-11T07:57:16Z')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_article,Articles))
@@ -44,4 +44,5 @@ class ArticlesTest(unittest.TestCase):
         self.assertEquals(self.new_article.title,'The next Big thing')
         self.assertEquals(self.new_article.description,'A look at the techhubs in Africa')
         self.assertEquals(self.new_article.url,'techie.com')
+        self.assertEquals(self.new_article.image,'techie.com/7643t94.jpg')
         self.assertEquals(self.new_article.date,'2020-07-11T07:57:16Z')
